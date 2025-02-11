@@ -1,0 +1,76 @@
+/* Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  padding-top: 15px;
+  background-color: #FDF6E3;  /* Warm cream background */
+  font-family: 'Open Sans', sans-serif;
+  color: #4E342E;  /* Warm brown text */
+}
+
+h1 {
+  font-family: 'Merriweather', serif;
+  font-size: 42px;
+  text-align: center;
+}
+
+/* Centered container with a max-width */
+.container {
+  max-width: 1020px; /* Increase max-width to fit 3 cards in a row */
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+/* Card Styles */
+.card {
+  position: relative;
+  width: 300px; /* Ensure each card is 300px wide */
+  height: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  outline: 1px solid #775047;
+}
+
+/* Hover and focus effect: slight scale-up */
+.card:hover,
+.card:focus {
+  transform: scale(1.05);
+}
+
+/* Card image style */
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Card text overlay (hidden by default) */
+.card-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(62, 39, 35, 0.8);  /* Warm dark overlay */
+  color: #FDF6E3;  /* Light text for contrast */
+  padding: 0 12px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Reveal text on hover or when focused */
+.card:hover .card-text,
+.card:focus .card-text {
+  opacity: 1;
+}
