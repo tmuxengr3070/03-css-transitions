@@ -70,7 +70,7 @@ h1 {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(62, 39, 35, 0.8);  /* Warm dark overlay */
+  background: rgba(62, 39, 35, 0.85);  /* Warm dark overlay */
   color: #FDF6E3;  /* Light text for contrast */
   padding: 0 12px;
   opacity: 0;
