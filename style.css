@@ -47,6 +47,12 @@ h1 {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   outline: 2px solid #775047;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover,
+.card:focus {
+  transform: scale(1.05);
 }
 
 /* Card image style */
@@ -65,5 +71,13 @@ h1 {
   right: 0;
   background: rgba(62, 39, 35, 0.85);  /* Warm dark overlay */
   color: #FDF6E3;  /* Light text for contrast */
+  opacity: 0;
   padding: 0 12px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Show card text on hover or focus */
+.card:hover .card-text,
+.card:focus .card-text {
+  opacity: 1;
 }
