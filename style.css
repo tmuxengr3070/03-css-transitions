@@ -66,5 +66,13 @@ h1 {
   right: 0;
   background: rgba(62, 39, 35, 0.85);  /* Warm dark overlay */
   color: #FDF6E3;  /* Light text for contrast */
+  opacity: 0;
+  transition: opacity 0.5s ease;
   padding: 0 12px;
+}
+
+/* Show card text on card hover or focus */
+.card:hover .card-text,
+.card:focus .card-text {
+  opacity: 1;
 }
